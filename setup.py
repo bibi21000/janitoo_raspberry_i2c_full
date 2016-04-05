@@ -63,7 +63,7 @@ janitoo_entry_points = {
 }
 
 setup(
-    name = 'janitoo_raspberry_i2c',
+    name = 'janitoo_raspberry_i2c_full',
     description = "A server which handle many controller (hardware, onewire, i2c, ...) dedicated to the raspberry",
     long_description = "A server which handle many controller (hardware, onewire, i2c, ...) dedicated to the raspberry",
     author='Sébastien GALLET aka bibi2100 <bibi21000@gmail.com>',
@@ -94,12 +94,26 @@ setup(
     data_files = data_files,
     install_requires=[
                      'janitoo',
+                     'janitoo_factory',
                      'janitoo_raspberry',
+                     'janitoo_raspberry_i2c',
+                     'janitoo_raspberry_i2c_ads1x15',
+                     'janitoo_raspberry_i2c_bmp',
+                     'janitoo_raspberry_i2c_bno055',
+                     'janitoo_raspberry_i2c_ht16k33',
+                     'janitoo_raspberry_i2c_max9744',
                      'Adafruit-GPIO',
                     ],
     dependency_links = [
       'https://github.com/bibi21000/janitoo/archive/master.zip#egg=janitoo',
+      'https://github.com/bibi21000/janitoo_factory/archive/master.zip#egg=janitoo_factory',
       'https://github.com/bibi21000/janitoo_raspberry/archive/master.zip#egg=janitoo_raspberry',
+      'https://github.com/bibi21000/janitoo_raspberry_i2c/archive/master.zip#egg=janitoo_raspberry_i2c',
+      'https://github.com/bibi21000/janitoo_raspberry_i2c_ads1x15/archive/master.zip#egg=janitoo_raspberry_i2c_ads1x15',
+      'https://github.com/bibi21000/janitoo_raspberry_i2c_bmp/archive/master.zip#egg=janitoo_raspberry_i2c_bmp',
+      'https://github.com/bibi21000/janitoo_raspberry_i2c_bno055/archive/master.zip#egg=janitoo_raspberry_i2c_bno055',
+      'https://github.com/bibi21000/janitoo_raspberry_i2c_max9744/archive/master.zip#egg=janitoo_raspberry_i2c_max9744',
+      'https://github.com/bibi21000/janitoo_raspberry_i2c_ht16k33/archive/master.zip#egg=janitoo_raspberry_i2c_ht16k33',
       'https://github.com/adafruit/Adafruit_Python_GPIO/archive/master.zip#egg=Adafruit-GPIO',
     ],
     entry_points = janitoo_entry_points,
