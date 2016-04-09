@@ -55,4 +55,5 @@ class TestI2CSerser(JNTTDockerServer, JNTTDockerServerCommon):
     hadds = [HADD%(159,0), HADD%(159,1), HADD%(159,2), HADD%(159,3), HADD%(159,4), ]
 
     def test_040_server_start_no_error_in_log(self):
+        JNTTDockerServer.onlyDockerTest()
         JNTTDockerServerCommon.minimal_040_server_start_reload_restart(self)
