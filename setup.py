@@ -114,9 +114,4 @@ setup(
       'https://github.com/bibi21000/janitoo_raspberry_i2c_vcnl40xx/archive/master.zip#egg=janitoo_raspberry_i2c_vcnl40xx',
       'https://github.com/adafruit/Adafruit_Python_GPIO/archive/master.zip#egg=Adafruit-GPIO',
     ],
-    entry_points = {
-        "janitoo.threads": [
-            "rpii2c = janitoo_raspberry_i2c.thread_i2c:make_thread",
-        ],
-    },
 )
