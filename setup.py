@@ -54,14 +54,6 @@ def data_files_config(res, rsrc, src, pattern):
 data_files = []
 data_files_config(data_files, 'docs','src/docs/','*')
 
-#You must define a variable like the one below.
-#It will be used to collect entries without installing the package
-janitoo_entry_points = {
-    "janitoo.threads": [
-        "rpii2c = janitoo_raspberry_i2c.thread_i2c:make_thread",
-    ],
-}
-
 setup(
     name = 'janitoo_raspberry_i2c_full',
     description = "A server which handle many controller (hardware, onewire, i2c, ...) dedicated to the raspberry",
@@ -100,8 +92,11 @@ setup(
                      'janitoo_raspberry_i2c_ads1x15',
                      'janitoo_raspberry_i2c_bmp',
                      'janitoo_raspberry_i2c_bno055',
+                     'janitoo_raspberry_i2c_ds1307',
                      'janitoo_raspberry_i2c_ht16k33',
                      'janitoo_raspberry_i2c_max9744',
+                     'janitoo_raspberry_i2c_pca9685',
+                     'janitoo_raspberry_i2c_vcnl40xx',
                      'Adafruit-GPIO',
                     ],
     dependency_links = [
@@ -112,9 +107,16 @@ setup(
       'https://github.com/bibi21000/janitoo_raspberry_i2c_ads1x15/archive/master.zip#egg=janitoo_raspberry_i2c_ads1x15',
       'https://github.com/bibi21000/janitoo_raspberry_i2c_bmp/archive/master.zip#egg=janitoo_raspberry_i2c_bmp',
       'https://github.com/bibi21000/janitoo_raspberry_i2c_bno055/archive/master.zip#egg=janitoo_raspberry_i2c_bno055',
+      'https://github.com/bibi21000/janitoo_raspberry_i2c_ds1307/archive/master.zip#egg=janitoo_raspberry_i2c_ds1307',
       'https://github.com/bibi21000/janitoo_raspberry_i2c_max9744/archive/master.zip#egg=janitoo_raspberry_i2c_max9744',
       'https://github.com/bibi21000/janitoo_raspberry_i2c_ht16k33/archive/master.zip#egg=janitoo_raspberry_i2c_ht16k33',
+      'https://github.com/bibi21000/janitoo_raspberry_i2c_pca9685/archive/master.zip#egg=janitoo_raspberry_i2c_pca9685',
+      'https://github.com/bibi21000/janitoo_raspberry_i2c_vcnl40xx/archive/master.zip#egg=janitoo_raspberry_i2c_vcnl40xx',
       'https://github.com/adafruit/Adafruit_Python_GPIO/archive/master.zip#egg=Adafruit-GPIO',
     ],
-    entry_points = janitoo_entry_points,
+    entry_points = {
+        "janitoo.threads": [
+            "rpii2c = janitoo_raspberry_i2c.thread_i2c:make_thread",
+        ],
+    },
 )
