@@ -47,7 +47,8 @@ TAGGED := $(shell git tag | grep -c v${janitoo_version} )
 
 -include Makefile.local
 
-NOSECOVER     = --cover-package=${MODULENAME} --with-coverage --cover-inclusive --cover-html --cover-html-dir=${BUILDDIR}/docs/html/tools/coverage --with-html --html-file=${BUILDDIR}/docs/html/tools/nosetests/index.html
+NOSECOVER     = --cover-package=${MODULENAME},janitoo_raspberry_i2c,janitoo_raspberry_i2c_ads1x15,janitoo_raspberry_i2c_bmp,janitoo_raspberry_i2c_bno055,janitoo_raspberry_i2c_ds1307,janitoo_raspberry_i2c_ht16k33,janitoo_raspberry_i2c_max9744,janitoo_raspberry_i2c_pca9685,janitoo_raspberry_i2c_vcnl40xx \
+--with-coverage --cover-inclusive --cover-html --cover-html-dir=${BUILDDIR}/docs/html/tools/coverage --with-html --html-file=${BUILDDIR}/docs/html/tools/nosetests/index.html
 NOSEDOCKER     = --cover-package=${NOSEMODULES},${MODULENAME} --with-coverage --cover-inclusive --with-xunit --xunit-testsuite-name=${MODULENAME}
 
 .PHONY: help check-tag clean all build develop install uninstall clean-doc doc certification tests pylint deps docker-tests
