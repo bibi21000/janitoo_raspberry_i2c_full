@@ -36,8 +36,8 @@ ifeq (${python_version_major},3)
 endif
 
 MODULENAME   = $(shell basename `pwd`)
-NOSEMODULES  = janitoo,janitoo_factory,janitoo_db
-MOREMODULES  = janitoo_factory_ext,janitoo_raspberry,janitoo_raspberry_i2c,janitoo_raspberry_i2c_ads1x15,janitoo_raspberry_i2c_bmp,janitoo_raspberry_i2c_bno055,janitoo_raspberry_i2c_ds1307,janitoo_raspberry_i2c_ht16k33,janitoo_raspberry_i2c_max9744,janitoo_raspberry_i2c_pca9685,janitoo_raspberry_i2c_vcnl40xx
+NOSEMODULES  = janitoo,janitoo_factory,janitoo_db,janitoo_factory_ext,janitoo_raspberry
+MOREMODULES  = janitoo_raspberry_i2c,janitoo_raspberry_i2c_ads1x15,janitoo_raspberry_i2c_bmp,janitoo_raspberry_i2c_bno055,janitoo_raspberry_i2c_ds1307,janitoo_raspberry_i2c_ht16k33,janitoo_raspberry_i2c_max9744,janitoo_raspberry_i2c_pca9685,janitoo_raspberry_i2c_vcnl40xx
 
 DEBIANDEPS := $(shell [ -f debian.deps ] && cat debian.deps)
 BASHDEPS := $(shell [ -f bash.deps ] && echo "bash.deps")
