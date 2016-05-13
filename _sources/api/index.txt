@@ -1,0 +1,10 @@
+janitoo_raspberry_i2c_full package
+==================================
+
+Module contents
+---------------
+
+.. automodule:: janitoo_raspberry_i2c_full
+    :members:
+    :undoc-members:
+    :show-inheritance:

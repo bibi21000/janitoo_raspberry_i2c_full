@@ -1,0 +1,5 @@
+janitoo_raspberry_i2c_full package
+==================================
+
+Show janitoo's extensions.
+
