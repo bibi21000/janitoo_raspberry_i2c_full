@@ -2,9 +2,7 @@
 #
 
 NOSEMODULES  = janitoo,janitoo_factory,janitoo_factory_exts
-MOREMODULES  = janitoo_raspberry_i2c,janitoo_raspberry_i2c_ds1307,janitoo_raspberry_i2c_ina219,janitoo_raspberry_i2c_ads1x15,janitoo_raspberry_i2c_bno055,\
- janitoo_raspberry_i2c_bmp,janitoo_raspberry_i2c_drv8830,janitoo_raspberry_i2c_ht16k33,janitoo_raspberry_i2c_max9744,\
- janitoo_raspberry_i2c_pca9685,janitoo_raspberry_i2c_vcnl40xx
+MOREMODULES  = janitoo_raspberry_i2c,janitoo_raspberry_i2c_ds1307,janitoo_raspberry_i2c_ina219,janitoo_raspberry_i2c_ads1x15,janitoo_raspberry_i2c_bno055,janitoo_raspberry_i2c_bmp,janitoo_raspberry_i2c_drv8830,janitoo_raspberry_i2c_ht16k33,janitoo_raspberry_i2c_max9744,janitoo_raspberry_i2c_pca9685,janitoo_raspberry_i2c_vcnl40xx
 
 NOSECOVER     = --cover-package=${NOSEMODULES},${MODULENAME},${MOREMODULES} --with-coverage --cover-inclusive --with-xunit --xunit-testsuite-name=${MODULENAME}
 	
