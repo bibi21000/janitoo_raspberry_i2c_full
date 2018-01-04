@@ -57,8 +57,8 @@ class TestPiSerser(JNTTServer, JNTTServerCommon):
     hadds = [ HADD%(159,0), HADD%(159,1), HADD%(159,2), HADD%(159,3), HADD%(159,4),
               HADD%(159,5), HADD%(159,6), HADD%(159,7), HADD%(159,8), HADD%(159,9),
               HADD%(159,10) ]
-    longdelay = 120
-    shortdelay = 60
+    longdelay = 90
+    shortdelay = 30
 
     def test_011_start_reload_stop(self):
         JNTTServerCommon.test_011_start_reload_stop(self)
