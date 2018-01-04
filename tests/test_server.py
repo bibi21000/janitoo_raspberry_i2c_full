@@ -57,10 +57,14 @@ class TestPiSerser(JNTTServer, JNTTServerCommon):
     hadds = [ HADD%(159,0), HADD%(159,1), HADD%(159,2), HADD%(159,3), HADD%(159,4),
               HADD%(159,5), HADD%(159,6), HADD%(159,7), HADD%(159,8), HADD%(159,9),
               HADD%(159,10) ]
+    longdelay = 120
+    shortdelay = 60
 
     def test_011_start_reload_stop(self):
-        self.skipRasperryTest()
         JNTTServerCommon.test_011_start_reload_stop(self)
+
+    def test_012_start_reload_threads_stop(self):
+        JNTTServerCommon.skip_012_start_reload_threads_stop(self)
 
     def test_040_server_start_no_error_in_log(self):
         self.onlyRasperryTest()
